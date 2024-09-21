@@ -1,0 +1,126 @@
+/* Basic resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #652d9a30;
+}
+
+/* Header styling */
+header {
+    width: 100%;
+    background-color: #313b40;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav a img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Moving sentence animation */
+.moving-sentence {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    white-space: nowrap;
+    font-size: 18px;
+    color: white;
+    animation: slide-in-out 20s linear infinite;
+}
+
+@keyframes slide-in-out {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 50%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Image container styling */
+.image-container {
+    text-align: center;
+}
+
+.image-container img {
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    background-color: blue;
+    width: 300px;
+    height: 300px;
+}
+
+.btn {
+    background-color: #313b408e;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Footer styling */
+footer {
+    width: 100%;
+    background-color: #313b40;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    .image-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+nav p{
+    color: white;
+}
